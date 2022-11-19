@@ -48,7 +48,7 @@ app.get("/api/:rapperName", (request, response) => {
   const rapperName = request.params.rapperName.toLowerCase();
 
   if (rappers[rapperName]) {
-    response.json(rappers[rapperName.birthName]);
+    response.json(rappers[rapperName]);
   } else {
     //send other if rapper doesn't exist
     response.json(rappers["other rap city the rapper"]);

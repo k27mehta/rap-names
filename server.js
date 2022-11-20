@@ -13,14 +13,14 @@ const rappers = {
     birthLocation: "London, England",
   },
 
-  "Chance the rapper": {
+  "chance the rapper": {
     age: 34,
     birthDate: "April 21",
     birthName: "caaaca Bin",
     birthLocation: "London, England",
   },
 
-  "Chance the fob": {
+  "chance the fob": {
     age: 34,
     birthDate: "April 21",
     birthName: "aaaaSeyaa Bin",

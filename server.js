@@ -37,7 +37,7 @@ const rappers = {
 //inside express server do a get request
 
 app.get("/", (req, res) => {
-  res.sendFile("/index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 //listen to a diff path

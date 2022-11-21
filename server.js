@@ -35,7 +35,7 @@ const rappers = {
   },
 };
 //inside express server do a get request
-
+// '/' ==main route
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
@@ -44,14 +44,15 @@ app.get("/", (req, res) => {
 // have a callback with request and response parameter
 //send JSON as response
 app.get("/api/:rapperName", (request, response) => {
-  // grab query parament from request
+  // grab query parament from request - basically grabbing rapperName and putting it in const
   const rapperName = request.params.rapperName.toLowerCase();
 
+  //respond with birthName only
   if (rappers[rapperName]) {
-    response.json(rappers[rapperName]);
+    response.json(rappers[rapperName].birthName);
   } else {
     //send other if rapper doesn't exist
-    response.json(rappers["other rap city the rapper"]);
+    response.json(rappers["other rap city the rapper"].birthName);
   }
 });
 

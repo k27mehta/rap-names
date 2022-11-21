@@ -3,7 +3,6 @@ const app = express();
 const cors = require("cors");
 const PORT = 8000;
 
-app.use(express.static("./public"));
 app.use(cors());
 //created an obeject
 const rappers = {
@@ -56,6 +55,8 @@ app.get("/api/:rapperName", (request, response) => {
     response.json(rappers["other rap city the rapper"].birthName);
   }
 });
+
+app.use(express.static("./public"));
 
 app.listen(process.env.PORT || PORT, () => {
   console.log(`The server is running on ${PORT}! You better go!`);
